@@ -114,11 +114,12 @@
  ul li a{
      color: inherit;
      text-decoration: none;
-
+     transition: all 0.2s ease;
  }
 
  ul li a:hover{
      color: var(--secondary-color);
+     text-decoration: underline;
  }
 
  .menu-wrap .toggler:checked ~ .menu {
@@ -130,4 +131,8 @@
      transform: scale(1);
      transition-duration: var(--menu-speed);
      
+ }
+ .menu-wrap .toggler:checked ~ .menu > div > div {
+     opacity: 1;
+     transition: opacity 1s ease 0.2s;
  }
